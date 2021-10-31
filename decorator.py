@@ -19,6 +19,8 @@ def logger(path):
                 json.dump(log_dict, f, ensure_ascii=False, indent=4)
                 print('Log saved!')
 
+            return func_return
+
         return wrapper
 
     return decorator
@@ -39,4 +41,5 @@ data = {
     'email': 42,
     'ok': 98
 }
-max_sales(data)
+
+print(max_sales(data))
